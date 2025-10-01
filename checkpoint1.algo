@@ -27,7 +27,7 @@ FOR i FROM 1 TO q.length STEP 1  DO
         END_IF
     END_FOR
     IF (test=true) THEN
-        somme:=somme+q[i]
+        somme2:=somme2+q[i]
     END_IF
 END_FOR
 END
