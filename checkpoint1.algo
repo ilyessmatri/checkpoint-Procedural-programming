@@ -1,0 +1,33 @@
+ALGORITHM algorithm_name
+VAR
+    t : ARRAY_OF INTEGER[length]: [3, 1, 7, 9];
+    q : ARRAY_OF INTEGER[length]: [2, 4, 1, 9, 3];
+    test: BOOLEAN:=FALSE;
+    somme: INTEGER:=0
+    somme2: INTEGER:=0
+BEGIN
+FOR i FROM 1 TO t.length STEP 1  DO
+    test:=FALSE
+    FOR j FROM 1 TO t.length  STEP 1  DO
+        IF (t[i]= q[j]) THEN
+            test:=TRUE
+            break
+        END_IF
+    END_FOR
+    IF (test=true) THEN
+        somme:=somme+t[i]
+    END_IF
+END_FOR
+FOR i FROM 1 TO q.length STEP 1  DO
+    test:=FALSE
+    FOR j FROM 1 TO t.length  STEP 1  DO
+        IF (t[i]= q[j]) THEN
+            test:=TRUE
+            break
+        END_IF
+    END_FOR
+    IF (test=true) THEN
+        somme:=somme+q[i]
+    END_IF
+END_FOR
+END
